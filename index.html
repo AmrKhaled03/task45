@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Book Store</title>
+</head>
+<body>
+    <!-- start header -->
+<header class="header mb-3">
+    <div class="container ">
+        <div class="row d-flex flex-column ">
+            <div class="col-12 ">
+                <h1 class="text-center">
+                    Book Store                </h1>
+            </div>
+            <div class="col-12">
+                <p class="text-center">
+                    Create - Read - Delete - Search
+                </p>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- end header -->
+     <!-- start crud -->
+<div class="crud ">
+    <div class="container">
+<div class="row pb-2 w-100">
+    <div class="col-12 ">
+<input  type="text" name="title" id="title" placeholder="Title">
+    </div>
+</div>
+<div class="row pb-2 w-100">
+    <div class="col-12 ">
+<input  type="number" name="id" id="id" placeholder="Id">
+    </div>
+</div>
+<div class="row pb-2">
+    <div class="col">
+<input onkeyup="calcTotal()" type="number" name="price" id="price" placeholder="Price">
+        
+    </div>
+    <div class="col">
+<input onkeyup="calcTotal()" type="number" name="taxes" id="taxes" placeholder="Taxes">
+
+    </div>
+    <div class="col">
+<input onkeyup="calcTotal()" type="number" name="ads" id="ads" placeholder="Ads">
+
+    </div>
+    <div class="col">
+<input onkeyup="calcTotal()" type="number" name="discount" id="discount" placeholder="Discount">
+
+    </div>
+    <div class="col">
+        <small id="total" class="total" >
+ 
+        </small>
+    </div>
+</div>
+<div class="row pb-2">
+  
+    <div class="col-12 ">
+        <input type="number" name="count" id="count" placeholder="Count">
+            </div>
+           
+</div>
+<div class="row pb-2">
+  
+    <div class="col-12 ">
+        <input type="text" name="category" id="category" placeholder="Category">
+            </div>
+           
+</div>
+<div class="row pb-2">
+    <div class="col-12 ">
+        <button type="button" onclick="addProduct()" id="create">
+Create
+        </button>
+    </div>
+</div>
+<div class="row pb-2">
+  
+    <div class="col-12 ">
+        <input type="text" name="search" id="search" placeholder="Search" onkeyup="searchData(this.value)">
+            </div>
+           
+</div>
+<div class="row">
+    <div class="col-6">
+        <button type="button" onclick="getSearchMood(this.id)"  id="searchCategory">
+           Search By Category
+                    </button>  
+    </div>
+    <div class="col-6">
+        <button type="button"onclick="getSearchMood(this.id)"  id="searchTitle">
+            Search By Title
+                    </button>
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- end crud -->
+     <!-- start data  -->
+<div class="data  mt-5 ">
+    <div class="container">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th >Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th >Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th >Total</th>
+                    <th >Count</th>
+                    <th>Category</th>
+                    <th class="text-center">Actions</th>
+                  </tr>
+              </thead>
+              <tbody class="tbody">
+              
+              </tbody>
+          </table>
+    </div>
+</div>
+
+
+<!-- end data -->
+
+ <script src="js/bootstrap.js"></script>
+ <script src="js/script.js"></script>
+</body>
+</html>

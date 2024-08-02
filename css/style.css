@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  background: #A1662F;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.header > .container > .row > .col-12 > p {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+}
+.header > .container > .row > .col-12 > h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 900;
+}
+.crud {
+  width: 100%;
+}
+input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background:  wheat;
+  border-radius: 5px;
+  padding: 20px;
+  color: black;
+}
+input:focus {
+  background: wheat;
+  transform: scale(1.1);
+}
+.total {
+  text-align: center;
+  position: relative;
+  top: 5px;
+  background-color: #a00d02;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+.total::before {
+  content: "TOTAL : ";
+}
+button {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: #335B96;
+  padding: 10px;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+button:hover {
+  background-color: #335B96;
+  letter-spacing: 2px;
+}
+td,
+th {
+  color: wheat;
+  text-transform: uppercase;
+}
+th {
+  font-weight: 800;
+}
+.button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #335B96;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 80px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 30px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: 0.3s;
+}
+.Btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 30px;
+  border: none;
+  padding: 0px 15px;
+  background-color: #335B96;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #335B96;
+  transition-duration: 0.3s;
+}
+
+.svg {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  color: transparent;
+}
+
+.Btn:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.Btn:active {
+  transform: translate(3px, 3px);
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 0px #335B96;
+}
+
+aside {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #40404095;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  z-index: 9999;
+  transition: 0.5s linear;
+}
+aside.active {
+  right: 0;
+}
+
+.aside > .container > .icon {
+  padding: 10px;
+}
+i {
+  font-size: 25px;
+}
+.product {
+  border: 1px solid #ccc;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row[class*="col-"] {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (max-width: 576px) {
+  .row[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.plusButton {
+  /* Config start */
+  --plus_sideLength: 2.5rem;
+  --plus_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.plusButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plus_topRightTriangleSideLength)
+    var(--plus_topRightTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover {
+  cursor: pointer;
+}
+
+.plusButton:hover::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton:focus-visible::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton > .plusIcon {
+  fill: white;
+  width: calc(var(--plus_sideLength) * 0.7);
+  height: calc(var(--plus_sideLength) * 0.7);
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover > .plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+
+.plusButton:focus-visible > .plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+.loader {
+  flex-direction: column;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: #000;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.disappear {
+  animation: vanish 5s forwards;
+}
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.form {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #40404095;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  z-index: 9999;
+  transition: 0.5s linear;
+}
+
+.open {
+  left: 0;
+}
